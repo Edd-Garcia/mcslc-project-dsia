@@ -55,7 +55,12 @@ import seaborn as sns
 ## Analytical Steps
 
 •	Identify city trends. Plot average total response time by month for each city `Eugene`, `Springfield`, `Other`. Line plot where X: Months, Y: Mean(Total Response Time)
-
-•	Identify reasons for dispatch trends using multiple small line plots, a line for each category/reason over the months.  
+•	Using clean separate dataframes for each city, group the means of the different minute columns and the total response time column by year and month.
+•	Melt the grouped table into three columns, Year_Month, Time Metric, and Minutes
+•	Using Seaborn, use the melted table to graph a line plot for each time metric with Year_Month as the x variable.
+•	Repeat these steps for Springfield and for Other.
+•	Now group the minute columns based on the reason for dispatch. 
+•	Using seaborn, create horizontal bar plots that show minutes as the x variable and the reasons for dispatch as the y variable for both operational years. Make a bar plot for each time difference column.
+•	Repeat the previous steps for Springfield and Other
 
 •	Potential models: Event Study, Dynamic DiD, Mixed Effects Durations.
